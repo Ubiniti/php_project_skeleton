@@ -1,5 +1,10 @@
 <?php
 
+if (!is_dir(__DIR__ . "/vendor/autoload.php")) {
+    print("\"vendor\" directory does not exist. Did you forget to run composer install?");
+    die();
+}
+
 $loader = require __DIR__ . "/vendor/autoload.php";
 
 try {
